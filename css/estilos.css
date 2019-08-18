@@ -1,0 +1,52 @@
+body{
+  margin: 0 auto;
+  background: black;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5vw;
+}
+
+header{
+  width: 75%;
+  margin: 0 auto;
+  background: #5B7989;
+  color: white;
+  display: flex;
+}
+
+#titulo{
+  margin: 0;
+  padding: 0.7em;
+  width: 70%;
+}
+
+#menu{
+  margin: 0;
+  padding: 0;
+  width: 30%;
+}
+
+#menu ul{
+  list-style-type: none;
+  display: flex;
+  float: right;
+  padding: 0;
+}
+
+#menu ul > li{
+  padding: 1em;
+  display: block;
+  flex-flow: row;
+
+}
+
+#imagen-central{
+  margin: 0 auto;
+  text-align: center;
+  width: 75%;
+  background: #82C3A6;
+}
+
+#imagen-central img{
+  margin: 1% auto;
+  width: 80%;
+}
