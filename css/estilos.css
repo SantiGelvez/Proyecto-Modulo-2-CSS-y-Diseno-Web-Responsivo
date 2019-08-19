@@ -22,7 +22,6 @@ body{
   margin: 5px auto;
 }
 
-/**/
 header{
   width: 100%;
   margin: 0 auto;
@@ -38,6 +37,7 @@ header{
   padding: 0.7em;
   width: 70%;
   text-shadow: 2px 2px 2px #02010a;
+  font-size: 2em;
 }
 
 #menu{
@@ -96,6 +96,10 @@ img{
   width: 80%;
 }
 
+.ima-secundaria a{
+  color: black;
+}
+
 #img-paisaje{
   transition: transform 1s, filter 1s, border 1s;
 }
@@ -133,11 +137,12 @@ img[src$=".png"]{
 
 a[href^="https:"]{
   text-decoration-line: none;
+  color: black;
 }
 
 .pie-pagina{
   font-size: 1.1em;
-  margin: 0 1em;
+  margin: 0 1em 2em 1em;
   width: 25%;
 }
 
@@ -145,4 +150,39 @@ a[href^="https:"]{
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+@media screen and (max-width:899px) {
+  body{
+    font-size: 4vw;
+  }
+  #contenido{
+    width: 100%;
+    margin: 0 auto;
+  }
+  header{
+    flex-flow: column;
+  }
+  #titulo{
+    width: 100%;
+  }
+  #menu{
+    width: 100%;
+  }
+  #menu ul{
+    text-align: center;
+    display: block;
+    float: none;
+  }
+  #menu ul > li{
+    float: left;
+    margin: 0;
+    width: 33.3%;
+  }
+  #secundaria{
+    flex-flow: column;
+  }
+  .ima-secundaria{
+    width: 100%;
+  }
 }
