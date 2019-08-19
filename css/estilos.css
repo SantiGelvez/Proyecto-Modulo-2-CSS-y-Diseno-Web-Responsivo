@@ -1,22 +1,43 @@
-body{
-  margin: 0 auto;
-  background: black;
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.5vw;
+/* ---- Animación de rebote desde el Header ---- */
+@-webkit-keyframes menuAnimacion{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
 }
 
+body{
+  margin: 1px auto;
+  background: #02010a;
+  font-family: 'Dancing Script', cursive;
+}
+
+#contenido{
+  width: 900px;
+  margin: 5px auto;
+}
+
+/**/
 header{
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
   background: #5B7989;
   color: white;
   display: flex;
+  animation: menuAnimacion 1s;
+  border-radius: 10px 10px 0 0;
 }
 
 #titulo{
   margin: 0;
   padding: 0.7em;
   width: 70%;
+  text-shadow: 2px 2px 2px #02010a;
 }
 
 #menu{
@@ -26,27 +47,102 @@ header{
 }
 
 #menu ul{
+  font-size: 1.2em;
   list-style-type: none;
   display: flex;
   float: right;
   padding: 0;
 }
 
-#menu ul > li{
-  padding: 1em;
+#menu ul > li > a{
+  color: white;
+  margin: 0 2px;
+  padding: 0.5em;
   display: block;
   flex-flow: row;
+}
 
+img{
+  filter: drop-shadow(2px 2px 2px #02010a);
 }
 
 #imagen-central{
   margin: 0 auto;
   text-align: center;
-  width: 75%;
+  width: 100%;
   background: #82C3A6;
 }
 
 #imagen-central img{
-  margin: 1% auto;
+  margin: 1em auto;
   width: 80%;
+}
+
+#secundaria{
+  width: 100%;
+  background: #d5c75f;
+  display: flex;
+}
+
+.ima-secundaria{
+  width: 50%;
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.ima-secundaria img{
+  margin: 1em auto 0 auto;
+  width: 80%;
+}
+
+#img-paisaje{
+  transition: transform 1s, filter 1s, border 1s;
+}
+#img-paisaje:hover{
+  transform: rotate(10deg);
+  filter: drop-shadow(2px 2px 2px #82c3a6);
+  border: 2px solid #82c3a6;
+}
+#img-retrato{
+  transition: transform 1s, filter 1s, border 1s;
+}
+#img-retrato:hover{
+  transform: translate(-20px,-5px);
+  filter: drop-shadow(2px 2px 2px #82c3a6);
+  border: 2px solid #82c3a6;
+}
+
+footer{
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: #C6d5c5;
+  display: flex;
+}
+
+img[src$=".png"]{
+  filter: none;
+  border-radius: 10px;
+  width: 25px;
+  vertical-align: middle;
+}
+
+.pie-pagina:nth-child(3) ul > li{
+  padding: 3px 0;
+}
+
+a[href^="https:"]{
+  text-decoration-line: none;
+}
+
+.pie-pagina{
+  font-size: 1.1em;
+  margin: 0 1em;
+  width: 25%;
+}
+
+.pie-pagina ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
